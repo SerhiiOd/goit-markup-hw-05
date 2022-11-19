@@ -128,9 +128,6 @@ img {
   color: var(--hover-focus-link-button);
 }
 
-.item-info {
-}
-
 .contact {
   display: flex;
   margin-left: auto;

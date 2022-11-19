@@ -157,8 +157,8 @@ img {
   fill: var(--color-text-contact);
 }
 
-.contact .info:hover,
-.contact .info:focus {
+.info:hover,
+.info:focus {
   color: var(--hover-focus-link-button);
   fill: var(--hover-focus-link-button);
 }

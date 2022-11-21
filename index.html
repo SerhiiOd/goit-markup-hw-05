@@ -56,7 +56,7 @@
             Ефективні рішення для <br />
             вашого бізнесу
           </h1>
-          <button type="button" class="baner-button">Замовити послугу</button>
+          <button type="button" class="baner-button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!--Деталі-->
@@ -379,6 +379,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close" data-modal-close>
+          <svg class="svg-close" width="18px" height="18px">
+            <use href="/images/symbol-defss.svg#close-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/model.js"></script>
   </body>
 </html>

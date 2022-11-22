@@ -113,6 +113,7 @@ img {
 }
 
 .nav-link .font {
+  position: relative;
   display: block;
   color: var(--color-text-link);
   font-weight: 500;
@@ -121,6 +122,19 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.font:hover:after,
+.font:focus:after,
+.current::after {
+  margin-top: 29px;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--hover-focus-link-button);
+  border-radius: 2px;
 }
 
 .nav-link .font:hover,
@@ -265,7 +279,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Заняття Команда index */
+/* Заняття */
 
 .glava-job-title {
   background-color: var(--background-color-sect-button);
@@ -289,6 +303,26 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: var(--margin-content);
 }
+
+.img-box {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text-title-button);
+  background: rgba(47, 48, 58, 0.8);
+}
+
+/* Команда */
 
 .bg-card {
   background-color: var(--color-text-title-button);
@@ -443,6 +477,44 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-right: -30px;
+}
+
+.product-thumb {
+  position: relative;
+}
+
+.product-thumb::before {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.mark-bg:hover .product-thumb::before {
+  opacity: 1;
+}
+
+.text-thumb {
+  position: absolute;
+  opacity: 0;
+  top: 63px;
+  bottom: 63px;
+  left: 24px;
+  right: 24px;
+  height: 168px;
+  max-width: 322px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--color-text-title-button);
+}
+
+.mark-bg:hover .text-thumb {
+  opacity: 1;
 }
 
 .mark-bg:hover {
@@ -614,7 +686,7 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-  
+
   cursor: pointer;
   border: transparent;
   background: transparent;

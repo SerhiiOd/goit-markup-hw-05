@@ -122,27 +122,35 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.font:hover:after,
-.font:focus:after,
+.current {
+  position: relative;
+}
+
 .current::after {
-  margin-top: 29px;
-  display: block;
-  content: '';
   position: absolute;
+  content: '';
   width: 100%;
   height: 4px;
-  background: var(--hover-focus-link-button);
+  bottom: 0;
+  left: 0;
   border-radius: 2px;
+  background-color: var(--hover-focus-link-button);
 }
 
-.nav-link .font:hover,
-.nav-link .font:focus {
+.current .current::after {
+  opacity: 1;
   color: var(--hover-focus-link-button);
 }
 
 .nav-link .current {
+  color: var(--hover-focus-link-button);
+}
+
+.nav-link .font:hover,
+.nav-link .font:focus {
   color: var(--hover-focus-link-button);
 }
 
@@ -170,6 +178,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   fill: var(--color-text-contact);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact .info:hover,
@@ -481,45 +490,36 @@ img {
 
 .product-thumb {
   position: relative;
-}
-
-.product-thumb::before {
-  display: inline-block;
-  position: absolute;
-  opacity: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-}
-
-.mark-bg:hover .product-thumb::before {
-  opacity: 1;
+  overflow: hidden;
 }
 
 .text-thumb {
   position: absolute;
   opacity: 0;
-  top: 63px;
-  bottom: 63px;
-  left: 24px;
-  right: 24px;
-  height: 168px;
-  max-width: 322px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
-  color: var(--color-text-title-button);
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mark-bg:hover .text-thumb {
+.bg-mark:hover .text-thumb {
+  transform: translateY(0);
   opacity: 1;
 }
 
 .mark-bg:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .maket-bg > .mark-bg {
@@ -678,8 +678,6 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  /* text-align: end; */
 }
 
 .close {

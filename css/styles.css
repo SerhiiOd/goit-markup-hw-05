@@ -694,6 +694,9 @@ img {
   top: 8px;
   right: 8px;
 
+    fill: #000000;
+
+
   cursor: pointer;
   border: transparent;
   background: transparent;
@@ -704,7 +707,6 @@ img {
   height: 30px;
   padding: 6px;
   border-radius: 50%;
-  fill: #000000;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }

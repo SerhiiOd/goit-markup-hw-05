@@ -528,7 +528,6 @@ img {
 
 .bg-mark:hover .text-thumb {
   transform: translateY(0);
-  /* opacity: 1; */
 }
 
 .mark-bg:hover {

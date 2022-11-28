@@ -510,7 +510,7 @@ img {
 
 .text-thumb {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   top: 0;
   left: 0;
   width: 100%;
